@@ -1,0 +1,9 @@
+| Qty | Description   | Unit  | Amount |
+|-----|---------------|-------|--------|
+| 3   | Cable pack    | 8.00  | 24.00  |
+| 1   | Adapter       | 12.00 | 12.00  |
+
+Vendor: Northwind Traders
+Invoice: NW-8842
+Date: 2024-06-01
+TOTAL: $36.00 USD

@@ -1,0 +1,7 @@
+| Qty | Description | Unit | Amount |
+|-----|-------------|------|--------|
+| 2   | License     | 50.00| 100.00 |
+| 1   | Support     | 25.00| 25.00  |
+
+Invoice: BAD-9001
+TOTAL: $999.00 USD

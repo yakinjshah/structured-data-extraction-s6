@@ -1,0 +1,11 @@
+[project]
+name = "invoice-extraction-s6"
+version = "0.1.0"
+description = "CCA-F Scenario 6 invoice extraction pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "anthropic>=0.40.0",
+]
+
+[tool.ruff]
+line-length = 100
