@@ -1,0 +1,21 @@
+# Few-shot invoice layout examples (Scenario 6 step 5)
+
+## Example A — inline list layout
+Invoice #INV-1001 from Acme Supplies dated 2024-03-15
+Items: Widget A x2 @ $10.00 = $20.00; Widget B x1 @ $15.00 = $15.00
+Total due: $35.00 USD
+
+## Example B — table layout
+| Qty | Description   | Unit | Amount |
+|-----|---------------|------|--------|
+| 3   | Cable pack    | 8.00 | 24.00  |
+| 1   | Adapter       | 12.00| 12.00  |
+Vendor: Northwind Traders
+Invoice: NW-8842  Date: 2024-06-01
+TOTAL: $36.00
+
+## Example C — narrative layout
+Please remit payment to Global Parts LLC for services rendered in April.
+Reference number 44219. No vendor block on letterhead.
+Line charges were three hours consulting at one hundred twenty dollars per hour.
+Amount payable three hundred sixty dollars.

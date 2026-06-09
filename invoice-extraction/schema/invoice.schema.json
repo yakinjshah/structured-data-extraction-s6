@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InvoiceExtraction",
+  "type": "object",
+  "required": ["invoice_number", "stated_total", "calculated_total", "line_items", "confidence"],
+  "properties": {
+    "vendor": {
+      "type": ["string", "null"],
+      "description": "Vendor name from the document, or null if absent — never guess."
+    },
+    "invoice_date": {
+      "type": ["string", "null"],
+      "description": "ISO date YYYY-MM-DD, or null if not found."
+    },
+    "invoice_number": {
+      "type": ["string", "null"],
+      "description": "Invoice identifier, or null if missing."
+    },
+    "currency": {
+      "type": ["string", "null"],
+      "enum": ["USD", "EUR", "GBP", "INR", null]
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description", "quantity", "unit_price", "line_total"],
+        "properties": {
+          "description": { "type": "string" },
+          "quantity": { "type": "number" },
+          "unit_price": { "type": "number" },
+          "line_total": { "type": "number" }
+        }
+      }
+    },
+    "stated_total": {
+      "type": ["number", "null"],
+      "description": "Total printed on the invoice."
+    },
+    "calculated_total": {
+      "type": ["number", "null"],
+      "description": "Sum of line item totals computed by the extractor."
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["vendor", "invoice_date", "line_items", "stated_total"],
+      "properties": {
+        "vendor": { "type": "number", "minimum": 0, "maximum": 1 },
+        "invoice_date": { "type": "number", "minimum": 0, "maximum": 1 },
+        "line_items": { "type": "number", "minimum": 0, "maximum": 1 },
+        "stated_total": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Optional free-text flags such as total_mismatch."
+    }
+  }
+}
